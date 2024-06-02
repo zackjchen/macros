@@ -43,3 +43,13 @@ pub fn derive_enum_from(input: TokenStream) -> TokenStream {
     }
 }
 ```
+
+### 3.5requirement
+```rust
+#[derive(AutoDeref(mut = true, field="inner")), AutoDebug]
+pub struct RespBulkString {
+    inner: String,
+    #[debug(skip)]
+    nothing(),
+}
+```
