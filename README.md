@@ -16,6 +16,7 @@ let c = vec!{1,2,3};
 1. 声明lib为proc-macro
 2. 导入必要的lib
 3. Ident和Type是大多时候可以互换，但更建议用Type信息更全
+4. 使用范型时，不要带尖括号
 
 ```toml
 [lib]
@@ -25,6 +26,7 @@ proc-macro = true
 proc-macro2 = "1"
 quote = "1" // 生成TokenStream的
 syn = "2" // 解析TokenStream的
+darling = "" // extract data from DeriveInput
 ```
 
 ```rust
